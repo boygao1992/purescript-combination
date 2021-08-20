@@ -1,0 +1,10 @@
+{
+  "name": "purescript-combination",
+  "license": "MIT",
+  "devDependencies": {
+    "purty": "^7.0.0"
+  },
+  "dependencies": {
+    "decimal.js": "^10.3.1"
+  }
+}
