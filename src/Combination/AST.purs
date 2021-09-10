@@ -19,6 +19,7 @@ data Expr
   | Multiply Expr Expr
   | Divide Expr Expr
   | Min Expr Expr
+  | Int Int
 
 evalExpr :: Expr -> Decimal
 evalExpr = case _ of
@@ -29,6 +30,7 @@ evalExpr = case _ of
   Multiply x y -> evalExpr x * evalExpr y
   Divide x y -> evalExpr x / evalExpr y
   Min x y -> Data.Decimal.min (evalExpr x) (evalExpr y)
+  Int x -> Data.Decimal.fromInt x
 
 nChooseK :: Int -> Int -> Decimal
 nChooseK n' k' =
